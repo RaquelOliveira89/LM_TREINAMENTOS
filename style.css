@@ -233,7 +233,7 @@ footer {
 
 .gallery-item {
   position: relative;
-  height: 280px; 
+  height: 300px; 
   border-radius: 12px;
   overflow: hidden;
   background-color: var(--bg-white);
