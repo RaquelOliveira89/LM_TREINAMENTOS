@@ -289,7 +289,7 @@ footer {
 .bg-support { background-color: rgba(52, 169, 220, 0.1); }
 
 /* Ajustes de Responsividade Gerais */
-@media (max-width: 991px) {
+@media (max-width: 551px) {
   /* Melhorias para tablets e celulares */
   .navbar-brand img {
     max-height: 45px;
