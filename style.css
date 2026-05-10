@@ -289,11 +289,16 @@ footer {
 .bg-support { background-color: rgba(52, 169, 220, 0.1); }
 
 /* Ajustes de Responsividade Gerais */
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2.2rem !important;
-    line-height: 1.2;
+@media (max-width: 991px) {
+  /* Melhorias para tablets e celulares */
+  .navbar-brand img {
+    max-height: 45px;
   }
+  
+  .nav-link {
+    margin: 5px 0;
+  }
+}
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 32px;
