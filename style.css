@@ -1,0 +1,433 @@
+:root {
+  --primary-blue: #0E3B9C;
+  --dark-blue: #082A7A;
+  --secondary-text: #555555;
+  --vibrant-blue: #1149D1;
+  --light-blue: #34A9DC;
+  --highlight-yellow: #F5D548;
+  --detail-pink: #E45C8A;
+  --bg-light: #F4F7FB;
+  --text-dark: #13233F;
+  --bg-white: #FFFFFF;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(14, 59, 156, 0.2);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Estado da Navbar ao rolar */
+.navbar.navbar-scrolled {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 8px;
+  position: relative;
+  color: var(--text-dark) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover { color: var(--vibrant-blue) !important; }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--light-blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after { width: 100%; }
+
+.nav-contact-btn {
+  border: 1px solid var(--primary-blue);
+  border-radius: 6px;
+  padding: 8px 20px !important;
+  margin-left: 10px;
+  color: var(--primary-blue) !important;
+}
+
+.nav-contact-btn:hover {
+  background-color: var(--primary-blue);
+  color: white !important;
+}
+
+/* Hero Section - Ajuste de Responsividade */
+.hero {
+  padding: 160px 0 100px;
+  text-align: center;
+  min-height: 70vh;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.btn-custom {
+  background: var(--highlight-yellow);
+  color: var(--text-dark);
+  font-weight: bold;
+  border: none;
+  padding: 12px 30px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.btn-custom:hover {
+  background: #e6c843;
+  transform: translateY(-3px) scale(1.02);
+  color: var(--text-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseRed {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+.bg-danger.badge { animation: pulseRed 2s infinite; }
+
+.hero h1 { animation: slideUpFade 0.8s ease-out forwards; }
+.hero p { animation: slideUpFade 0.8s ease-out 0.2s forwards; opacity: 0; }
+.hero .btn-custom { animation: slideUpFade 0.8s ease-out 0.4s forwards; opacity: 0; }
+
+html { scroll-behavior: smooth; }
+
+.section-padding {
+  padding: 80px 0;
+}
+
+section { position: relative; }
+
+.section-title {
+  color: var(--primary-blue);
+  margin-bottom: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Diferenciais */
+.diferencial-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid rgba(14, 59, 156, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diferencial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(14, 59, 156, 0.1);
+}
+
+.icon-box i {
+  font-size: 2.5rem;
+  color: var(--vibrant-blue);
+  margin-bottom: 20px;
+}
+
+/* Cards de Cursos */
+.card-course {
+  background: var(--bg-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  color: var(--text-dark);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  height: 100%;
+}
+.card-course:hover {
+  transform: translateY(-10px);
+  border-color: var(--light-blue);
+  box-shadow: 0 10px 25px rgba(52, 169, 220, 0.15);
+}
+.card-course i { color: var(--vibrant-blue); font-size: 2.5rem; }
+
+.service-box { transition: all 0.3s ease; }
+.service-box:hover {
+  background-color: var(--bg-white) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.whatsapp-float:hover { color: white; background-color: #128c7e; }
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--bg-white);
+  padding: 60px 0;
+}
+
+.footer-logo {
+  background-color: var(--bg-white);
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 70px; /* Altura sofisticada para o rodapé */
+  width: auto;
+}
+
+.footer-logo:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.logo-dynamic {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+.logo-dynamic:hover {
+  transform: scale(1.15) rotate(2deg) !important;
+  filter: drop-shadow(0 0 10px var(--primary-blue));
+  animation-play-state: paused;
+}
+
+/* --- GALERIA PREMIUM --- */
+/* Removido o 'gap' que conflita com o grid do Bootstrap */
+.gallery-row { margin-top: 30px; }
+
+.gallery-item {
+  position: relative;
+  height: 280px; 
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste crítico: preenche sem deformar */
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(14, 59, 156, 0.12);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay Sofisticado */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, rgba(8, 42, 122, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Subtítulo Premium */
+.subtitle-premium {
+  color: var(--secondary-text);
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.bg-support { background-color: rgba(52, 169, 220, 0.1); }
+
+/* Ajustes de Responsividade Gerais */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+  .gallery-item {
+    height: 220px;
+  }
+  .section-padding {
+    padding: 50px 0;
+  }
+  .hero {
+    padding: 100px 10px 60px;
+  }
+  .nav-link {
+    margin: 5px 0;
+  }
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* --- SEÇÃO CONTATO PREMIUM --- */
+.contact-info-card {
+  background: var(--bg-white);
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(14, 59, 156, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.contact-info-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(14, 59, 156, 0.08);
+  border-color: var(--light-blue);
+}
+
+.contact-info-card i {
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(14, 59, 156, 0.05);
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover i {
+  background: var(--primary-blue);
+  color: var(--bg-white);
+}
+
+.contact-info-card div h6 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.contact-info-card div p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+/* Formulário Premium */
+#lead-form .form-control {
+  border-radius: 12px;
+  padding: 15px 20px;
+  border: 2px solid transparent;
+  background-color: var(--bg-light);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+#lead-form .form-control:focus {
+  background-color: var(--bg-white);
+  border-color: var(--light-blue);
+  box-shadow: 0 10px 20px rgba(14, 59, 156, 0.05);
+  outline: none;
+}
+
+.btn-premium-cta {
+  background: linear-gradient(135deg, var(--primary-blue), var(--vibrant-blue));
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(14, 59, 156, 0.2);
+}
+
+.btn-premium-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(14, 59, 156, 0.3);
+  color: white;
+  filter: brightness(1.1);
+}
+
+/* Cores de Marca Customizadas para Ícones */
+.contact-whatsapp i { color: #25D366; background: rgba(37, 211, 102, 0.1); }
+.contact-whatsapp:hover i { background: #25D366; color: #fff; }
+
+.contact-email i { color: #EA4335; background: rgba(234, 67, 53, 0.1); }
+.contact-email:hover i { background: #EA4335; color: #fff; }
+
+.contact-instagram i { color: #E4405F; background: rgba(228, 64, 95, 0.1); }
+.contact-instagram:hover i { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: #fff;
+}
+
+.contact-location i { color: var(--primary-blue); background: rgba(14, 59, 156, 0.1); }
+.contact-location:hover i { background: var(--primary-blue); color: #fff; }
+
+/* Hover nas redes sociais do footer */
+.footer-social-link i { 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+.footer-social-link:hover i { transform: scale(1.2); }
+.footer-social-link.insta:hover i { color: #E4405F !important; }
+.footer-social-link.whats:hover i { color: #25D366 !important; }
