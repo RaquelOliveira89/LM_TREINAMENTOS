@@ -22,6 +22,10 @@
     <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
@@ -52,6 +56,7 @@
                     <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#turmas">Turmas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="anticorrupcao.html">Canal de Ética</a></li>
                     <li class="nav-item"><a class="nav-link nav-contact-btn" href="#contato">Garantir Vaga</a></li>
                 </ul>
             </div>
@@ -61,18 +66,55 @@
     <main>
         <!-- HERO -->
         <header id="home" class="hero d-flex align-items-center">
-            <div class="container text-center">
-                <div class="badge bg-danger mb-3 p-2 px-3 shadow-sm" data-aos="fade-down">Matrículas Abertas - Vagas Limitadas</div>
-                <h1 class="display-4 fw-bold" style="letter-spacing: -1px;">
-                    Domine as Habilidades
-                    <span style="color: var(--vibrant-blue);">que o Mercado de Manaus Exige</span>
-                </h1>
-                <p class="lead mt-4 mx-auto px-3" style="max-width: 700px;">
-                    Transforme seu currículo com treinamentos práticos no <b>Shopping Sumaúma</b>. Aprenda as ferramentas essenciais para as melhores vagas do Polo Industrial.
-                </p>
-                <a href="#cursos" class="btn btn-custom rounded-pill mt-4">
-                    Quero garantir minha vaga agora
-                </a>
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <div class="badge bg-danger mb-3 p-2 px-3 shadow-sm" data-aos="fade-down"><i class="bi bi-lightning-charge-fill me-1"></i>Matrículas Abertas - Vagas Limitadas</div>
+                        <h1 class="display-4 fw-bold" style="letter-spacing: -1px;" data-aos="fade-up">
+                            Domine as Habilidades
+                            <span style="color: var(--vibrant-blue);">que o Mercado de Manaus Exige</span>
+                        </h1>
+                        <p class="lead mt-4 mx-auto mx-lg-0 px-3 px-lg-0" style="max-width: 560px;" data-aos="fade-up" data-aos-delay="100">
+                            Transforme seu currículo com treinamentos práticos no <b>Shopping Sumaúma</b>. Aprenda as ferramentas essenciais para as melhores vagas do Polo Industrial.
+                        </p>
+                        <a href="#cursos" class="btn btn-custom rounded-pill mt-4" data-aos="fade-up" data-aos-delay="200">
+                            Quero garantir minha vaga agora <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                        <div class="hero-stats row g-3 mt-5" data-aos="fade-up" data-aos-delay="300">
+                            <div class="col-4">
+                                <div class="hero-stat-number">+10</div>
+                                <div class="hero-stat-label">Anos de Experiência</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="hero-stat-number">18</div>
+                                <div class="hero-stat-label">Treinamentos</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="hero-stat-number">100%</div>
+                                <div class="hero-stat-label">Presencial</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+                        <div class="hero-media">
+                            <span class="hero-accent-bars" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </span>
+                            <img src="assets/Foto_Certificacao_Turma_01.jpeg" alt="Turma da LM Treinamentos recebendo certificado" class="hero-photo">
+                            <div class="hero-floating-card">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <div>
+                                    <strong>Certificado</strong>
+                                    <span>ao final do curso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -81,6 +123,7 @@
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col-12">
+                        <span class="eyebrow">Quem Somos</span>
                         <h2 class="section-title">Sobre a LM Treinamentos</h2>
                     </div>
                     <div class="col-lg-8">
@@ -93,27 +136,28 @@
         </section>
 
         <!-- SERVIÇOS -->
-        <section id="servicos" class="section-padding bg-light">
+        <section id="servicos" class="section-padding bg-light dot-grid">
             <div class="container text-center">
+                <span class="eyebrow">O Que Entregamos</span>
                 <h2 class="section-title" data-aos="fade-up">Nossos Serviços</h2>
                 <div class="row g-4">
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="p-4 bg-white rounded shadow-sm service-box h-100">
-                            <i class="bi bi-building-check fs-1 mb-3 d-block" style="color: var(--detail-pink);"></i>
+                            <div class="icon-box mx-auto" style="background: linear-gradient(135deg, var(--detail-pink), #ff8fb3);"><i class="bi bi-building-check"></i></div>
                             <h4 class="fw-bold">Treinamentos In Company</h4>
                             <p class="text-muted">Capacitação personalizada para sua equipe dentro do ambiente da sua empresa.</p>
                         </div>
                     </div>
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="p-4 bg-white rounded shadow-sm service-box h-100">
-                            <i class="bi bi-graph-up-arrow fs-1 mb-3 d-block" style="color: var(--primary-blue);"></i>
+                            <div class="icon-box mx-auto"><i class="bi bi-graph-up-arrow"></i></div>
                             <h4 class="fw-bold">Consultoria em BI e Excel</h4>
                             <p class="text-muted">Desenvolvimento de dashboards inteligentes e automação de processos complexos.</p>
                         </div>
                     </div>
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="p-4 bg-white rounded shadow-sm service-box h-100">
-                            <i class="bi bi-person-workspace fs-1 mb-3 d-block" style="color: var(--light-blue);"></i>
+                            <div class="icon-box mx-auto" style="background: linear-gradient(135deg, var(--light-blue), #7fd4ec);"><i class="bi bi-person-workspace"></i></div>
                             <h4 class="fw-bold">Mentoria Individual</h4>
                             <p class="text-muted">Acompanhamento focado para acelerar o seu domínio em ferramentas tecnológicas.</p>
                         </div>
@@ -126,6 +170,7 @@
 <section id="diferenciais" class="section-padding bg-support">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="eyebrow">Por Que A LM</span>
                     <h2 class="section-title">Por que escolher a LM Treinamentos?</h2>
                     <p class="lead subtitle-premium">Formação prática, moderna e voltada para o mercado de trabalho.</p>
                 </div>
@@ -179,35 +224,193 @@
         <!-- CURSOS -->
         <section id="cursos" class="section-padding">
             <div class="container">
-                <div class="section-title text-center">
-                    <h2>Nossos Treinamentos</h2>
+                <div class="text-center mb-4" data-aos="fade-up">
+                    <span class="eyebrow">Trilhas De Aprendizado</span>
+                    <h2 class="section-title">Nossos Treinamentos</h2>
+                    <p class="lead subtitle-premium">Trilhas completas em Dados, Gestão, Tecnologia e Qualidade — mais de 10 anos de experiência aplicada.</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="zoom-in">
+
+                <div class="course-filters d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
+                    <button type="button" class="filter-pill active" data-filter="todos">Todos</button>
+                    <button type="button" class="filter-pill" data-filter="dados">Dados e Inteligência</button>
+                    <button type="button" class="filter-pill" data-filter="gestao">Gestão e Liderança</button>
+                    <button type="button" class="filter-pill" data-filter="tecnologia">Tecnologia Aplicada</button>
+                    <button type="button" class="filter-pill" data-filter="qualidade">Qualidade e Compliance</button>
+                </div>
+
+                <div class="row g-4" id="cursos-grid">
+                    <!-- DADOS E INTELIGÊNCIA -->
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
                         <div class="card card-course p-4">
-                            <i class="bi bi-cpu mb-3"></i>
-                            <h3>Auxiliar ADM com IA</h3>
-                            <p>Modernize sua rotina administrativa com Inteligência Artificial.</p>
+                            <div class="icon-box"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Excel do Básico ao Avançado</h3>
+                            <p>Fórmulas, tabelas dinâmicas, gráficos avançados e introdução a Macros.</p>
                             <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
                         <div class="card card-course p-4">
-                            <i class="bi bi-file-earmark-spreadsheet mb-3"></i>
-                            <h3>Excel Especialista</h3>
-                            <p>Do zero aos dashboards avançados e automação.</p>
+                            <div class="icon-box"><i class="bi bi-bar-chart-line"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Power BI Estratégico</h3>
+                            <p>ETL com Power Query, modelagem de dados, DAX e storytelling visual.</p>
                             <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
                         <div class="card card-course p-4">
-                            <i class="bi bi-bar-chart-line mb-3"></i>
-                            <h3>Power BI</h3>
-                            <p>Análise de dados profissional para tomada de decisão.</p>
+                            <div class="icon-box"><i class="bi bi-robot"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Inteligência Artificial para Negócios</h3>
+                            <p>Engenharia de prompt, análise de documentos, criação de imagens e apresentações.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-gear-wide-connected"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Automação de Planilhas</h3>
+                            <p>Lógica de programação, Macros (VBA/Office Scripts) e automação de relatórios.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-diagram-3"></i></div>
+                            <span class="badge-horas">7h · 20h</span>
+                            <h3>Automações Inteligentes com N8N</h3>
+                            <p>Da imersão a workflows avançados: APIs, webhooks e automações com IA.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-code-slash"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Automações com Python</h3>
+                            <p>Bibliotecas de automação, integração com APIs e agendamento de tarefas.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- GESTÃO E LIDERANÇA -->
+                    <div class="col-lg-4 col-md-6 course-item" data-category="gestao" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-person-badge"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Liderança de Alta Performance</h3>
+                            <p>Inteligência emocional, comunicação assertiva, feedback e gestão de conflitos.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="gestao" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-kanban"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>Gestão de Projetos e Processos</h3>
+                            <p>Mapeamento de processos, metodologias ágeis e melhoria contínua.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- TECNOLOGIA APLICADA -->
+                    <div class="col-lg-4 col-md-6 course-item" data-category="tecnologia" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-code-square"></i></div>
+                            <span class="badge-horas">40h</span>
+                            <h3>Desenvolvimento Front-End</h3>
+                            <p>HTML5, CSS3, interatividade básica com JavaScript e responsividade.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="tecnologia" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-calendar3-week"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>MS Project</h3>
+                            <p>Estrutura Analítica do Projeto (EAP), caminho crítico e acompanhamento.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- QUALIDADE E COMPLIANCE -->
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-graph-up"></i></div>
+                            <span class="badge-horas">8h</span>
+                            <h3>CEP — Controle Estatístico de Processo</h3>
+                            <p>Cartas de controle, capacidade de processo (Cp, Cpk) e análise de variação.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-tools"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>PCM — Planejamento e Controle da Manutenção</h3>
+                            <p>Manutenção preventiva, corretiva e preditiva; indicadores MTBF e MTTR.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-boxes"></i></div>
+                            <span class="badge-horas">20h</span>
+                            <h3>PCP — Planejamento e Controle de Produção</h3>
+                            <p>Previsão de demanda, sequenciamento, gestão de estoques e MRP.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-clipboard-data"></i></div>
+                            <span class="badge-horas">16h</span>
+                            <h3>As 7 Ferramentas da Qualidade</h3>
+                            <p>Diagrama de Ishikawa, Pareto, histograma, fluxograma e cartas de controle.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-search"></i></div>
+                            <span class="badge-horas">16h</span>
+                            <h3>MASP</h3>
+                            <p>Análise de causa raiz, plano de ação 5W2H e verificação de resultados.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-mortarboard"></i></div>
+                            <span class="badge-horas">10h</span>
+                            <h3>TWI — Training Within Industry</h3>
+                            <p>Instrução e padronização de processos — metodologia usada pela Toyota.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+                            <span class="badge-horas">NRs</span>
+                            <h3>Normas Regulamentadoras</h3>
+                            <p>NR-10, 11, 12, 13, 15, 18, 20, 33 e 35 — certificação e reciclagem.</p>
+                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
+                        <div class="card card-course p-4">
+                            <div class="icon-box"><i class="bi bi-award"></i></div>
+                            <span class="badge-horas">24h</span>
+                            <h3>Certificações ISO</h3>
+                            <p>ISO 9001 (Qualidade), 14001 (Ambiental) e 45001 (Saúde e Segurança).</p>
                             <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>
+
+                <p class="text-center text-muted mt-4 mb-0" id="cursos-empty" style="display:none;">Nenhum treinamento nesta categoria no momento.</p>
             </div>
         </section>
 
@@ -215,18 +418,19 @@
         <section id="turmas" class="section-padding bg-support">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="eyebrow">Próximas Turmas</span>
                     <h2 class="section-title">Turmas e Datas</h2>
                     <p class="lead subtitle-premium">Organize sua agenda e garanta sua participação nos próximos treinamentos.</p>
                 </div>
                 <div class="row g-4 justify-content-center">
                     <!-- Excel Regular -->
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="diferencial-card h-100 position-relative">
-                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger mt-2">Últimas 5 Vagas</span>
+                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger mt-2">Inscrições Abertas</span>
                             <div class="icon-box"><i class="bi bi-file-earmark-spreadsheet"></i></div>
                             <h4 class="fw-bold">Excel Básico ao Avançado</h4>
                             <div class="mt-3 text-start w-100 ps-md-4">
-                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 06/06 a 04/07/2026</p>
+                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 22/08 a 19/09/2026</p>
                                 <p class="mb-2"><i class="bi bi-clock me-2 text-primary"></i> <strong>Horário:</strong> 08h às 12h</p>
                                 <p class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> <strong>Modalidade:</strong> Presencial</p>
                                 <p class="mb-0"><i class="bi bi-alarm me-2 text-primary"></i> <strong>Carga Horária:</strong> 20 horas</p>
@@ -235,40 +439,12 @@
                     </div>
 
                     <!-- Power BI Regular -->
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="diferencial-card h-100">
                             <div class="icon-box"><i class="bi bi-bar-chart-line"></i></div>
                             <h4 class="fw-bold">Power BI do Zero ao Avançado</h4>
                             <div class="mt-3 text-start w-100 ps-md-4">
-                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 06/06 a 04/07/2026</p>
-                                <p class="mb-2"><i class="bi bi-clock me-2 text-primary"></i> <strong>Horário:</strong> 13h às 17h</p>
-                                <p class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> <strong>Modalidade:</strong> Presencial</p>
-                                <p class="mb-0"><i class="bi bi-alarm me-2 text-primary"></i> <strong>Carga Horária:</strong> 20 horas</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Excel Intensivo -->
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="diferencial-card h-100">
-                            <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
-                            <h4 class="fw-bold">Excel Intensivo (Semanal)</h4>
-                            <div class="mt-3 text-start w-100 ps-md-4">
-                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 15/06 a 19/06/2026</p>
-                                <p class="mb-2"><i class="bi bi-clock me-2 text-primary"></i> <strong>Horário:</strong> 08h às 12h</p>
-                                <p class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> <strong>Modalidade:</strong> Presencial</p>
-                                <p class="mb-0"><i class="bi bi-alarm me-2 text-primary"></i> <strong>Carga Horária:</strong> 20 horas</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Power BI Intensivo -->
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="diferencial-card h-100">
-                            <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
-                            <h4 class="fw-bold">Power BI Intensivo (Semanal)</h4>
-                            <div class="mt-3 text-start w-100 ps-md-4">
-                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 22/06 a 26/06/2026</p>
+                                <p class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Período:</strong> 22/08 a 19/09/2026</p>
                                 <p class="mb-2"><i class="bi bi-clock me-2 text-primary"></i> <strong>Horário:</strong> 13h às 17h</p>
                                 <p class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i> <strong>Modalidade:</strong> Presencial</p>
                                 <p class="mb-0"><i class="bi bi-alarm me-2 text-primary"></i> <strong>Carga Horária:</strong> 20 horas</p>
@@ -282,17 +458,20 @@
         <!-- GALERIA -->
         <section id="galeria" class="section-padding bg-light">
             <div class="container">
-                <h2 class="section-title text-center mb-5" data-aos="fade-down">Ambiente e Treinamentos</h2>
+                <div class="text-center mb-5" data-aos="fade-down">
+                    <span class="eyebrow">Nossos Bastidores</span>
+                    <h2 class="section-title">Ambiente e Treinamentos</h2>
+                </div>
                 <div class="row g-4 gallery-row" data-aos="fade-up">
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item">
-                            <img src="assets/Foto_Aula_01.jpeg" alt="Instrutora em sala de aula" class="img-fluid w-100" loading="lazy">
+                            <img src="assets/Foto_Certificacao_Turma_01.jpeg" alt="Turma recebendo certificado de conclusão" class="img-fluid w-100" loading="lazy">
                             <div class="gallery-overlay"></div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item">
-                            <img src="assets/Foto_Aula_02.jpeg" alt="Apresentação de dashboard" class="img-fluid w-100" loading="lazy">
+                            <img src="assets/Foto_Aula_01.jpeg" alt="Instrutora em sala de aula" class="img-fluid w-100" loading="lazy">
                             <div class="gallery-overlay"></div>
                         </div>
                     </div>
@@ -304,7 +483,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item">
-                            <img src="assets/Foto_sentada_aula_02.jpeg" alt="Ambiente profissional e moderno" class="img-fluid w-100" loading="lazy">
+                            <img src="assets/Foto_Alunas_Notebook.jpeg" alt="Mentoria individual durante treinamento" class="img-fluid w-100" loading="lazy">
                             <div class="gallery-overlay"></div>
                         </div>
                     </div>
@@ -316,7 +495,28 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-item">
-                            <img src="assets/Ensinando.jpeg" alt="Instrutora orientando aluno durante treinamento" class="img-fluid w-100" loading="lazy">
+                            <img src="assets/Foto_Certificacao_Turma_02.jpeg" alt="Turma recebendo certificado de conclusão" class="img-fluid w-100" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 gallery-row mt-1" data-aos="fade-up">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-item">
+                            <video src="assets/Video_Turma_01.mp4" class="w-100" controls muted playsinline preload="metadata"></video>
+                            <div class="gallery-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-item">
+                            <video src="assets/Video_Turma_02.mp4" class="w-100" controls muted playsinline preload="metadata"></video>
+                            <div class="gallery-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="gallery-item">
+                            <video src="assets/Video_Turma_03.mp4" class="w-100" controls muted playsinline preload="metadata"></video>
                             <div class="gallery-overlay"></div>
                         </div>
                     </div>
@@ -328,6 +528,7 @@
         <section id="contato" class="section-padding bg-white">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="eyebrow">Vamos Começar</span>
                     <h2 class="section-title">Fale Conosco</h2>
                     <p class="lead text-muted">Estamos prontos para impulsionar sua carreira ou sua empresa.</p>
                 </div>
@@ -419,7 +620,11 @@
                 <a href="https://wa.me/5592981238797" target="_blank" class="text-white fs-4 footer-social-link whats"><i class="bi bi-whatsapp"></i></a>
             </div>
             <p class="mb-2 opacity-75">&copy; 2024 LM Treinamentos e Consultoria. Todos os direitos reservados.</p>
-            <p><a href="politica-de-privacidade.html" class="text-white-50 text-decoration-none small">Política de Privacidade</a></p>
+            <p>
+                <a href="politica-de-privacidade.html" class="text-white-50 text-decoration-none small">Política de Privacidade</a>
+                <span class="text-white-50 mx-2">|</span>
+                <a href="anticorrupcao.html" class="text-white-50 text-decoration-none small">Canal de Ética e Denúncias</a>
+            </p>
         </div>
     </footer>
 

@@ -1,0 +1,304 @@
+/* =====================================================
+   LM TREINAMENTOS
+   Página Canal de Denúncias
+===================================================== */
+
+:root{
+
+    --primary:#0E3B9C;
+    --primary-dark:#082A7A;
+    --secondary:#f8f9fa;
+    --text:#13233F;
+    --white:#ffffff;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+    --radius:18px;
+
+}
+
+body{
+
+    background:#fff;
+    color:var(--text);
+    font-family:'Segoe UI',sans-serif;
+
+}
+
+.text-primary{
+
+    color:var(--primary) !important;
+
+}
+
+/*========================
+ HERO
+=========================*/
+
+.hero-compliance{
+
+    padding:120px 0;
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:white;
+    text-align:center;
+
+}
+
+.hero-compliance h1{
+
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:20px;
+
+}
+
+.hero-compliance p{
+
+    max-width:750px;
+    margin:auto;
+    font-size:1.15rem;
+    opacity:.95;
+
+}
+
+.hero-compliance .btn{
+
+    margin-top:30px;
+    padding:15px 45px;
+    border-radius:40px;
+    font-weight:600;
+
+}
+
+/*========================
+ CARDS
+=========================*/
+
+.card{
+
+    border:none;
+    border-radius:var(--radius);
+    transition:.35s;
+    overflow:hidden;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+.card i{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.card h4{
+
+    font-weight:700;
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#666;
+
+}
+
+/*========================
+ FORMULÁRIO
+=========================*/
+
+#formulario{
+
+    background:#f5f8fc;
+
+}
+
+#formulario .card{
+
+    border-radius:25px;
+    box-shadow:var(--shadow);
+
+}
+
+#formulario h2{
+
+    font-weight:700;
+    color:var(--primary);
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+}
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+    min-height:52px;
+    border:1px solid #d9d9d9;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:var(--primary);
+    box-shadow:0 0 0 .2rem rgba(14,59,156,.15);
+
+}
+
+textarea.form-control{
+
+    min-height:180px;
+    resize:vertical;
+
+}
+
+/*========================
+ BOTÃO
+=========================*/
+
+.btn-primary{
+
+    background:var(--primary);
+    border:none;
+    border-radius:40px;
+    padding:15px 40px;
+    font-weight:700;
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+
+}
+
+/*========================
+ CHECKBOX
+=========================*/
+
+.form-check{
+
+    background:#eef5ff;
+    padding:18px;
+    border-radius:12px;
+
+}
+
+.form-check-input{
+
+    width:22px;
+    height:22px;
+    cursor:pointer;
+
+}
+
+.form-check-label{
+
+    margin-left:8px;
+    font-weight:600;
+
+}
+
+/*========================
+ INPUT FILE
+=========================*/
+
+input[type=file]{
+
+    padding:12px;
+
+}
+
+/*========================
+ RESPONSIVO
+=========================*/
+
+@media(max-width:992px){
+
+.hero-compliance{
+
+padding:90px 20px;
+
+}
+
+.hero-compliance h1{
+
+font-size:2.3rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-compliance{
+
+padding:70px 20px;
+
+}
+
+.hero-compliance h1{
+
+font-size:2rem;
+
+}
+
+.card{
+
+margin-bottom:25px;
+
+}
+
+.card-body{
+
+padding:25px;
+
+}
+
+#formulario .card{
+
+padding:10px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-compliance h1{
+
+font-size:1.7rem;
+
+}
+
+.hero-compliance p{
+
+font-size:1rem;
+
+}
+
+.btn-primary{
+
+width:100%;
+
+}
+
+}

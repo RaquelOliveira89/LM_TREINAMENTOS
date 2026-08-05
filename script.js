@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormHandling();
     initMobileMenu();
     initAutoRedirect();
+    initCourseFilter();
 });
 
 /**
@@ -104,6 +105,36 @@ function initFormHandling() {
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
         }
+    });
+}
+
+/**
+ * Filtro de trilhas na seção de Cursos
+ */
+function initCourseFilter() {
+    const pills = document.querySelectorAll('.filter-pill');
+    const items = document.querySelectorAll('.course-item');
+    const emptyMsg = document.getElementById('cursos-empty');
+    if (!pills.length || !items.length) return;
+
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            const filter = pill.dataset.filter;
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const match = filter === 'todos' || item.dataset.category === filter;
+                item.style.display = match ? '' : 'none';
+                if (match) visibleCount++;
+            });
+
+            if (emptyMsg) {
+                emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+        });
     });
 }
 

@@ -14,7 +14,34 @@
 body {
   background-color: var(--bg-light);
   color: var(--text-dark);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand, .btn, .section-title, .card-course h3 {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* Rótulo editorial acima dos títulos de seção */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vibrant-blue);
+  margin-bottom: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--detail-pink), var(--light-blue), var(--highlight-yellow));
 }
 
 /* Navbar */
@@ -71,27 +98,139 @@ body {
 /* Hero Section - Ajuste de Responsividade */
 .hero {
   padding: 160px 0 100px;
-  text-align: center;
   min-height: 70vh;
-  background-color: var(--bg-light);
+  background: linear-gradient(180deg, #eef3fc 0%, var(--bg-light) 100%);
   border-bottom: 1px solid rgba(0,0,0,0.05);
   overflow: hidden;
+  position: relative;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-blob-1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(52, 169, 220, 0.28), transparent 70%);
+}
+.hero-blob-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -160px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(228, 92, 138, 0.18), transparent 70%);
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+/* Foto do hero com barras de destaque da marca */
+.hero-media {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.hero-accent-bars {
+  position: absolute;
+  top: -22px;
+  left: -46px;
+  display: flex;
+  gap: 8px;
+  z-index: 0;
+}
+.hero-accent-bars span {
+  width: 10px;
+  height: 90px;
+  border-radius: 6px;
+  display: block;
+}
+.hero-accent-bars span:nth-child(1) { background: var(--detail-pink); height: 70px; margin-top: 20px; }
+.hero-accent-bars span:nth-child(2) { background: var(--light-blue); height: 100px; }
+.hero-accent-bars span:nth-child(3) { background: var(--highlight-yellow); height: 55px; margin-top: 35px; }
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(14, 59, 156, 0.22);
+  border: 6px solid var(--bg-white);
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 22px;
+  right: -18px;
+  z-index: 2;
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+.hero-floating-card i {
+  font-size: 1.6rem;
+  color: var(--highlight-yellow);
+}
+.hero-floating-card div { display: flex; flex-direction: column; line-height: 1.2; }
+.hero-floating-card strong { font-size: 0.9rem; color: var(--text-dark); }
+.hero-floating-card span { font-size: 0.78rem; color: var(--secondary-text); }
+
+.hero-stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--primary-blue);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: var(--secondary-text);
+  margin-top: 4px;
+}
+
+@media (max-width: 991px) {
+  .hero-media { margin-top: 40px; }
+  .hero-floating-card { right: 10px; }
 }
 
 .btn-custom {
-  background: var(--highlight-yellow);
+  background: linear-gradient(135deg, var(--highlight-yellow), #f0b93d);
   color: var(--text-dark);
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
   border: none;
-  padding: 12px 30px;
+  padding: 16px 36px;
+  font-size: 1.05rem;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(245, 213, 72, 0.35);
 }
 .btn-custom:hover {
-  background: #e6c843;
+  background: linear-gradient(135deg, #f0b93d, var(--highlight-yellow));
   transform: translateY(-3px) scale(1.02);
   color: var(--text-dark);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 30px rgba(245, 213, 72, 0.45);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--primary-blue);
+  --bs-btn-border-color: var(--primary-blue);
+  --bs-btn-hover-bg: var(--primary-blue);
+  --bs-btn-hover-border-color: var(--primary-blue);
+  --bs-btn-active-bg: var(--primary-blue);
+  --bs-btn-active-border-color: var(--primary-blue);
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 @keyframes slideUpFade {
@@ -120,11 +259,11 @@ html { scroll-behavior: smooth; }
 section { position: relative; }
 
 .section-title {
-  color: var(--primary-blue);
+  color: var(--text-dark);
   margin-bottom: 48px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-size: 2.2rem;
 }
 
 /* Diferenciais */
@@ -146,11 +285,43 @@ section { position: relative; }
   box-shadow: 0 10px 25px rgba(14, 59, 156, 0.1);
 }
 
-.icon-box i {
-  font-size: 2.5rem;
-  color: var(--vibrant-blue);
+.icon-box {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--vibrant-blue));
+  box-shadow: 0 8px 18px rgba(14, 59, 156, 0.25);
   margin-bottom: 20px;
+  flex-shrink: 0;
 }
+
+.icon-box i {
+  font-size: 1.6rem;
+  color: var(--bg-white);
+  margin-bottom: 0;
+}
+
+/* Selos coloridos por trilha nos cards de curso */
+.card-course .icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+}
+
+.card-course .icon-box i { font-size: 1.35rem; }
+
+.course-item[data-category="dados"] .icon-box { background: linear-gradient(135deg, var(--vibrant-blue), var(--light-blue)); }
+.course-item[data-category="gestao"] .icon-box { background: linear-gradient(135deg, var(--detail-pink), #ff8fb3); }
+.course-item[data-category="tecnologia"] .icon-box { background: linear-gradient(135deg, #e8a93d, var(--highlight-yellow)); }
+.course-item[data-category="qualidade"] .icon-box { background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue)); }
+
+.course-item[data-category="dados"] .card-course { border-top: 4px solid var(--vibrant-blue); }
+.course-item[data-category="gestao"] .card-course { border-top: 4px solid var(--detail-pink); }
+.course-item[data-category="tecnologia"] .card-course { border-top: 4px solid var(--highlight-yellow); }
+.course-item[data-category="qualidade"] .card-course { border-top: 4px solid var(--primary-blue); }
 
 /* Cards de Cursos */
 .card-course {
@@ -243,12 +414,14 @@ footer {
   border: 1px solid rgba(0,0,0,0.03);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajuste crítico: preenche sem deformar */
   object-position: center;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #000;
 }
 
 .gallery-item:hover {
@@ -288,6 +461,22 @@ footer {
 
 .bg-support { background-color: rgba(52, 169, 220, 0.1); }
 
+/* Textura pontilhada sutil, no espírito do material de marca da LM */
+.dot-grid {
+  position: relative;
+}
+.dot-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(14, 59, 156, 0.12) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+  pointer-events: none;
+}
+.dot-grid > * { position: relative; z-index: 1; }
+
 /* Ajustes de Responsividade Gerais */
 @media (max-width: 551px) {
   /* Melhorias para tablets e celulares */
@@ -298,7 +487,6 @@ footer {
   .nav-link {
     margin: 5px 0;
   }
-}
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 32px;
@@ -311,9 +499,6 @@ footer {
   }
   .hero {
     padding: 100px 10px 60px;
-  }
-  .nav-link {
-    margin: 5px 0;
   }
   .whatsapp-float {
     width: 50px;
@@ -411,6 +596,50 @@ footer {
   box-shadow: 0 15px 30px rgba(14, 59, 156, 0.3);
   color: white;
   filter: brightness(1.1);
+}
+
+/* --- FILTRO DE CURSOS --- */
+.filter-pill {
+  background: var(--bg-white);
+  border: 1px solid rgba(14, 59, 156, 0.15);
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--vibrant-blue);
+  color: var(--vibrant-blue);
+}
+
+.filter-pill.active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--bg-white);
+}
+
+.badge-horas {
+  display: inline-block;
+  background: rgba(14, 59, 156, 0.08);
+  color: var(--primary-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.card-course h3 {
+  font-size: 1.15rem;
+}
+
+.card-course p {
+  font-size: 0.92rem;
+  color: var(--secondary-text);
 }
 
 /* Cores de Marca Customizadas para Ícones */
