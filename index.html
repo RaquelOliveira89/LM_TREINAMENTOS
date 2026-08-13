@@ -102,6 +102,8 @@
                             <span class="hero-accent-bars" aria-hidden="true">
                                 <span></span><span></span><span></span>
                             </span>
+                            <div class="hero-float-badge badge-excel" aria-hidden="true"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+                            <div class="hero-float-badge badge-bi" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></div>
                             <img src="assets/Foto_Certificacao_Turma_01_hero.jpeg" alt="Turma da LM Treinamentos recebendo certificado" class="hero-photo">
                             <div class="hero-floating-card">
                                 <i class="bi bi-patch-check-fill"></i>
@@ -219,6 +221,42 @@
             </div>
         </section>
 
+        <!-- COMPARATIVO -->
+        <section id="comparativo" class="section-padding bg-light dot-grid">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="eyebrow">A Diferença Na Prática</span>
+                    <h2 class="section-title">Ensino Tradicional x LM Treinamentos</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="compare-card compare-card-old h-100">
+                            <h3><i class="bi bi-x-circle-fill"></i> Ensino Tradicional</h3>
+                            <ul>
+                                <li>Conteúdo genérico, sem aplicação prática no dia a dia</li>
+                                <li>Professores sem vivência real de mercado</li>
+                                <li>Material desatualizado frente às ferramentas atuais</li>
+                                <li>Turma segue um ritmo único, sem atenção individual</li>
+                                <li>Contato com o professor termina quando o curso acaba</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="compare-card compare-card-lm h-100">
+                            <h3><i class="bi bi-check-circle-fill"></i> LM Treinamentos</h3>
+                            <ul>
+                                <li>Aulas 100% práticas, com ferramentas reais do mercado</li>
+                                <li>Professora especialista, com experiência em educação técnica e tecnologia</li>
+                                <li>Conteúdo atualizado com IA, Excel Avançado e Power BI</li>
+                                <li>Turmas presenciais no Shopping Sumaúma, com acompanhamento próximo</li>
+                                <li>Certificado ao final, focado no que as empresas do Polo Industrial exigem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CURSOS -->
         <section id="cursos" class="section-padding">
             <div class="container">
@@ -229,11 +267,11 @@
                 </div>
 
                 <div class="course-filters d-flex flex-wrap justify-content-center gap-2 mb-5" data-aos="fade-up">
-                    <button type="button" class="filter-pill active" data-filter="todos">Todos</button>
-                    <button type="button" class="filter-pill" data-filter="dados">Dados e Inteligência</button>
-                    <button type="button" class="filter-pill" data-filter="gestao">Gestão e Liderança</button>
-                    <button type="button" class="filter-pill" data-filter="tecnologia">Tecnologia Aplicada</button>
-                    <button type="button" class="filter-pill" data-filter="qualidade">Qualidade e Compliance</button>
+                    <button type="button" class="filter-pill active" data-filter="todos"><i class="bi bi-grid"></i> Todos</button>
+                    <button type="button" class="filter-pill" data-filter="dados"><i class="bi bi-bar-chart-line"></i> Dados e Inteligência</button>
+                    <button type="button" class="filter-pill" data-filter="gestao"><i class="bi bi-people"></i> Gestão e Liderança</button>
+                    <button type="button" class="filter-pill" data-filter="tecnologia"><i class="bi bi-cpu"></i> Tecnologia Aplicada</button>
+                    <button type="button" class="filter-pill" data-filter="qualidade"><i class="bi bi-patch-check"></i> Qualidade e Compliance</button>
                 </div>
 
                 <div class="row g-4" id="cursos-grid">
@@ -244,7 +282,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Excel do Básico ao Avançado</h3>
                             <p>Fórmulas, tabelas dinâmicas, gráficos avançados e introdução a Macros.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
@@ -253,7 +291,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Power BI Estratégico</h3>
                             <p>ETL com Power Query, modelagem de dados, DAX e storytelling visual.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
@@ -262,7 +300,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Inteligência Artificial para Negócios</h3>
                             <p>Engenharia de prompt, análise de documentos, criação de imagens e apresentações.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
@@ -271,7 +309,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Automação de Planilhas</h3>
                             <p>Lógica de programação, Macros (VBA/Office Scripts) e automação de relatórios.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
@@ -280,7 +318,7 @@
                             <span class="badge-horas">7h · 20h</span>
                             <h3>Automações Inteligentes com N8N</h3>
                             <p>Da imersão a workflows avançados: APIs, webhooks e automações com IA.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="dados" data-aos="zoom-in">
@@ -289,7 +327,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Automações com Python</h3>
                             <p>Bibliotecas de automação, integração com APIs e agendamento de tarefas.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
 
@@ -300,7 +338,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Liderança de Alta Performance</h3>
                             <p>Inteligência emocional, comunicação assertiva, feedback e gestão de conflitos.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="gestao" data-aos="zoom-in">
@@ -309,7 +347,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>Gestão de Projetos e Processos</h3>
                             <p>Mapeamento de processos, metodologias ágeis e melhoria contínua.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
 
@@ -320,7 +358,7 @@
                             <span class="badge-horas">40h</span>
                             <h3>Desenvolvimento Front-End</h3>
                             <p>HTML5, CSS3, interatividade básica com JavaScript e responsividade.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="tecnologia" data-aos="zoom-in">
@@ -329,7 +367,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>MS Project</h3>
                             <p>Estrutura Analítica do Projeto (EAP), caminho crítico e acompanhamento.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
 
@@ -340,7 +378,7 @@
                             <span class="badge-horas">8h</span>
                             <h3>CEP — Controle Estatístico de Processo</h3>
                             <p>Cartas de controle, capacidade de processo (Cp, Cpk) e análise de variação.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -349,7 +387,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>PCM — Planejamento e Controle da Manutenção</h3>
                             <p>Manutenção preventiva, corretiva e preditiva; indicadores MTBF e MTTR.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -358,7 +396,7 @@
                             <span class="badge-horas">20h</span>
                             <h3>PCP — Planejamento e Controle de Produção</h3>
                             <p>Previsão de demanda, sequenciamento, gestão de estoques e MRP.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -367,7 +405,7 @@
                             <span class="badge-horas">16h</span>
                             <h3>As 7 Ferramentas da Qualidade</h3>
                             <p>Diagrama de Ishikawa, Pareto, histograma, fluxograma e cartas de controle.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -376,7 +414,7 @@
                             <span class="badge-horas">16h</span>
                             <h3>MASP</h3>
                             <p>Análise de causa raiz, plano de ação 5W2H e verificação de resultados.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -385,7 +423,7 @@
                             <span class="badge-horas">10h</span>
                             <h3>TWI — Training Within Industry</h3>
                             <p>Instrução e padronização de processos — metodologia usada pela Toyota.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -394,7 +432,7 @@
                             <span class="badge-horas">NRs</span>
                             <h3>Normas Regulamentadoras</h3>
                             <p>NR-10, 11, 12, 13, 15, 18, 20, 33 e 35 — certificação e reciclagem.</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 course-item" data-category="qualidade" data-aos="zoom-in">
@@ -403,7 +441,7 @@
                             <span class="badge-horas">24h</span>
                             <h3>Certificações ISO</h3>
                             <p>ISO 9001 (Qualidade), 14001 (Ambiental) e 45001 (Saúde e Segurança).</p>
-                            <a href="#contato" class="btn btn-outline-primary mt-auto">Ver Detalhes</a>
+                            <a href="#contato" class="btn btn-course-cta rounded-pill mt-auto">Ver Detalhes</a>
                         </div>
                     </div>
                 </div>

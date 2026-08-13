@@ -862,3 +862,119 @@ footer {
   .case-before-after { grid-template-columns: 1fr; }
   .case-tag { position: static; display: inline-flex; margin-bottom: 12px; }
 }
+
+/* --- Botão sólido dos cards de curso (estilo pílula) --- */
+.btn-course-cta {
+  background: linear-gradient(135deg, var(--highlight-yellow), #f0b93d);
+  color: var(--text-dark);
+  font-weight: 700;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.92rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(245, 213, 72, 0.3);
+}
+.btn-course-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 213, 72, 0.4);
+  color: var(--text-dark);
+  filter: brightness(1.03);
+}
+
+/* --- Selos flutuantes de ferramentas na foto do hero --- */
+.hero-float-badge {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(14, 59, 156, 0.25);
+  z-index: 3;
+  animation: floatBadge 3.5s ease-in-out infinite;
+}
+.badge-excel {
+  top: 20px;
+  right: -20px;
+  background: linear-gradient(135deg, #1D6F42, #2E9E5B);
+}
+.badge-bi {
+  top: 48%;
+  left: -22px;
+  background: linear-gradient(135deg, var(--highlight-yellow), #f0b93d);
+  color: var(--text-dark);
+  animation-delay: 0.8s;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 991px) {
+  .hero-float-badge { width: 44px; height: 44px; font-size: 1.15rem; border-radius: 13px; }
+  .badge-excel { right: -8px; }
+  .badge-bi { left: -8px; }
+}
+
+/* --- Ícones nas pílulas de filtro de cursos --- */
+.filter-pill i { margin-right: 5px; }
+
+/* --- Comparativo: Ensino Tradicional x LM Treinamentos --- */
+.compare-card {
+  border-radius: 20px;
+  padding: 36px 32px;
+}
+.compare-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+}
+.compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.compare-card li {
+  padding-left: 28px;
+  position: relative;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+.compare-card-old {
+  background: var(--bg-white);
+  border: 1px solid rgba(220, 53, 69, 0.15);
+}
+.compare-card-old h3 { color: #DC3545; }
+.compare-card-old li::before {
+  content: '\2715';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #DC3545;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.compare-card-lm {
+  background: linear-gradient(160deg, var(--primary-blue), var(--dark-blue));
+  border: 1px solid var(--primary-blue);
+  box-shadow: 0 20px 45px rgba(14, 59, 156, 0.25);
+}
+.compare-card-lm h3 { color: var(--highlight-yellow); }
+.compare-card-lm li { color: rgba(255,255,255,0.9); }
+.compare-card-lm li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--highlight-yellow);
+  font-weight: 700;
+}
