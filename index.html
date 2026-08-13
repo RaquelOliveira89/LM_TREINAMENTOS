@@ -55,6 +55,7 @@
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#turmas">Turmas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cases">Cases</a></li>
                     <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                     <li class="nav-item"><a class="nav-link" href="anticorrupcao.html">Canal de Ética</a></li>
                     <li class="nav-item"><a class="nav-link nav-contact-btn" href="#contato">Garantir Vaga</a></li>
@@ -411,6 +412,85 @@
                 </div>
 
                 <p class="text-center text-muted mt-4 mb-0" id="cursos-empty" style="display:none;">Nenhum treinamento nesta categoria no momento.</p>
+            </div>
+        </section>
+
+        <!-- CASES / PORTFÓLIO -->
+        <section id="cases" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="eyebrow">Resultados Aplicados</span>
+                    <h2 class="section-title">Cases e Portfólio de Projetos</h2>
+                    <p class="lead subtitle-premium">Projetos reais de treinamento e consultoria que já aplicamos — nomes e alguns dados alterados por confidencialidade.</p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- CASE 1: Faturas de Energia -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="case-card h-100">
+                            <span class="case-tag"><i class="bi bi-patch-check-fill"></i> Case Real</span>
+                            <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
+                            <h3>Consolidação de Faturas de Energia</h3>
+                            <p class="case-client">Consultoria para uma distribuidora de energia elétrica do Amazonas</p>
+
+                            <p><strong>Problema:</strong> o volume mensal de faturas ultrapassava o limite de ~1 milhão de linhas de uma única planilha, obrigando a cliente a quebrar o controle em 4 arquivos por mês — e consolidar tudo manualmente antes de qualquer relatório.</p>
+                            <p><strong>Solução:</strong> ensinamos a cliente a estruturar uma pasta com as planilhas mensais, importar tudo de uma vez no Power Query (combinação automática de arquivos), tratar e consolidar os dados, e carregar o modelo no Power BI com medidas DAX próprias.</p>
+                            <p><strong>Resultado:</strong> processo autônomo — todo mês a cliente só insere as novas planilhas na pasta e clica em Atualizar no Power BI para os indicadores se atualizarem sozinhos.</p>
+
+                            <div class="case-mockup">
+                                <div class="case-mockup-header"><i class="bi bi-bar-chart-line"></i> Estrutura do painel entregue</div>
+                                <div class="case-mockup-stats">
+                                    <div class="case-stat"><span class="case-stat-value">R$ 2,4 Mi</span><span class="case-stat-label">Total faturado/mês</span></div>
+                                    <div class="case-stat"><span class="case-stat-value">3,1 Mi kWh</span><span class="case-stat-label">Consumo total</span></div>
+                                    <div class="case-stat"><span class="case-stat-value">~5.000</span><span class="case-stat-label">Clientes (UCs)</span></div>
+                                    <div class="case-stat"><span class="case-stat-value">628 kWh</span><span class="case-stat-label">Consumo médio</span></div>
+                                </div>
+                                <div class="case-mockup-bars">
+                                    <div class="case-bar-row"><span>Município A</span><div class="case-bar"><div class="case-bar-fill" style="width:92%"></div></div></div>
+                                    <div class="case-bar-row"><span>Município B</span><div class="case-bar"><div class="case-bar-fill" style="width:81%"></div></div></div>
+                                    <div class="case-bar-row"><span>Município C</span><div class="case-bar"><div class="case-bar-fill" style="width:66%"></div></div></div>
+                                </div>
+                            </div>
+                            <p class="case-disclaimer">Estrutura ilustrativa do painel — números de exemplo, cliente e dados alterados por confidencialidade.</p>
+                        </div>
+                    </div>
+
+                    <!-- CASE 2: Controle de Horas Extras -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="case-card h-100">
+                            <span class="case-tag"><i class="bi bi-patch-check-fill"></i> Case Real</span>
+                            <div class="icon-box"><i class="bi bi-clock-history"></i></div>
+                            <h3>Controle de Horas Extras</h3>
+                            <p class="case-client">Treinamento para um grupo de colaboradores administrativos</p>
+
+                            <p><strong>Problema:</strong> a turma veio até um treinamento por causa de um gargalo real na empresa — falta de controle das horas extras dos funcionários, sabendo que, dependendo do contrato, existe um limite mensal permitido.</p>
+                            <p><strong>Solução:</strong> reestruturamos a planilha de controle com fórmulas auditáveis (visíveis célula a célula), validação de dados em lista suspensa para os campos categóricos, e um gráfico que se atualiza sozinho conforme a equipe vai preenchendo.</p>
+                            <p><strong>Resultado:</strong> saída de um controle manual e sujeito a erro para uma planilha estruturada, com sinalização automática de quem está perto do limite mensal.</p>
+
+                            <div class="case-before-after">
+                                <div class="case-ba-col case-ba-before">
+                                    <span class="case-ba-tag">Antes</span>
+                                    <ul>
+                                        <li>Controle manual, texto livre</li>
+                                        <li>Sem alerta de limite mensal</li>
+                                        <li>Fácil perder o controle do saldo</li>
+                                    </ul>
+                                </div>
+                                <div class="case-ba-col case-ba-after">
+                                    <span class="case-ba-tag">Depois</span>
+                                    <ul>
+                                        <li>Fórmulas auditáveis por colaborador/mês</li>
+                                        <li>Lista suspensa (validação de dados)</li>
+                                        <li>Gráfico dinâmico, atualiza sozinho</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="case-disclaimer">Estrutura ilustrativa da planilha entregue aos alunos.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
