@@ -109,33 +109,78 @@ function initFormHandling() {
 }
 
 /**
- * Filtro de trilhas na seção de Cursos
+ * Filtro de trilhas na seção de Cursos, com exibição inicial limitada
+ * (evita uma grade muito longa/repetitiva) e botão "ver todos".
  */
 function initCourseFilter() {
     const pills = document.querySelectorAll('.filter-pill');
-    const items = document.querySelectorAll('.course-item');
+    const items = Array.from(document.querySelectorAll('.course-item'));
     const emptyMsg = document.getElementById('cursos-empty');
+    const toggleBtn = document.getElementById('cursos-toggle');
     if (!pills.length || !items.length) return;
+
+    const INITIAL_COUNT = 6;
+    let currentFilter = 'todos';
+    let expanded = false;
+
+    // Torna o item visível imediatamente, sem depender do scroll-reveal do AOS
+    // (necessário porque itens escondidos com display:none nunca disparam o
+    // observer de interseção do AOS sozinhos).
+    const showItem = (item) => {
+        item.style.display = '';
+        item.classList.add('aos-animate');
+    };
+    const hideItem = (item) => {
+        item.style.display = 'none';
+    };
+
+    function applyVisibility() {
+        const matched = items.filter(item => currentFilter === 'todos' || item.dataset.category === currentFilter);
+        const matchedSet = new Set(matched);
+
+        items.forEach(item => {
+            if (!matchedSet.has(item)) {
+                hideItem(item);
+            }
+        });
+
+        matched.forEach((item, idx) => {
+            const shouldShow = expanded || currentFilter !== 'todos' || idx < INITIAL_COUNT;
+            shouldShow ? showItem(item) : hideItem(item);
+        });
+
+        if (emptyMsg) {
+            emptyMsg.style.display = matched.length === 0 ? 'block' : 'none';
+        }
+
+        if (toggleBtn) {
+            const hasMore = currentFilter === 'todos' && matched.length > INITIAL_COUNT;
+            toggleBtn.style.display = hasMore ? '' : 'none';
+            toggleBtn.textContent = expanded ? 'Ver menos' : `Ver todos os cursos (${matched.length})`;
+        }
+    }
 
     pills.forEach(pill => {
         pill.addEventListener('click', () => {
             pills.forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
-
-            const filter = pill.dataset.filter;
-            let visibleCount = 0;
-
-            items.forEach(item => {
-                const match = filter === 'todos' || item.dataset.category === filter;
-                item.style.display = match ? '' : 'none';
-                if (match) visibleCount++;
-            });
-
-            if (emptyMsg) {
-                emptyMsg.style.display = visibleCount === 0 ? 'block' : 'none';
-            }
+            currentFilter = pill.dataset.filter;
+            expanded = false;
+            applyVisibility();
         });
     });
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            expanded = !expanded;
+            applyVisibility();
+            if (!expanded) {
+                document.getElementById('cursos-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+
+    applyVisibility();
 }
 
 /**
