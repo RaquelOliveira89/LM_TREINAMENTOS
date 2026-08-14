@@ -185,14 +185,14 @@ function initCourseFilter() {
 }
 
 /**
- * Lightbox simples para ampliar os prints de planilha nos cases
+ * Lightbox simples para ampliar imagens (prints dos cases e fotos da galeria)
  * (sem depender do modal do Bootstrap, para manter leve).
  */
 function initCaseLightbox() {
     const overlay = document.getElementById('case-lightbox');
     const overlayImg = document.getElementById('case-lightbox-img');
     const closeBtn = document.getElementById('case-lightbox-close');
-    const triggers = document.querySelectorAll('.case-screenshot-img');
+    const triggers = document.querySelectorAll('.case-screenshot-img, .gallery-photo');
     if (!overlay || !overlayImg || !closeBtn || !triggers.length) return;
 
     const open = (src, alt) => {
