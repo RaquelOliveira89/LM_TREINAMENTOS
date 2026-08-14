@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initAutoRedirect();
     initCourseFilter();
+    initCaseLightbox();
 });
 
 /**
@@ -181,6 +182,46 @@ function initCourseFilter() {
     }
 
     applyVisibility();
+}
+
+/**
+ * Lightbox simples para ampliar os prints de planilha nos cases
+ * (sem depender do modal do Bootstrap, para manter leve).
+ */
+function initCaseLightbox() {
+    const overlay = document.getElementById('case-lightbox');
+    const overlayImg = document.getElementById('case-lightbox-img');
+    const closeBtn = document.getElementById('case-lightbox-close');
+    const triggers = document.querySelectorAll('.case-screenshot-img');
+    if (!overlay || !overlayImg || !closeBtn || !triggers.length) return;
+
+    const open = (src, alt) => {
+        overlayImg.src = src;
+        overlayImg.alt = alt || '';
+        overlay.classList.add('active');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    triggers.forEach(img => {
+        img.addEventListener('click', () => open(img.src, img.alt));
+    });
+
+    closeBtn.addEventListener('click', close);
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    });
 }
 
 /**

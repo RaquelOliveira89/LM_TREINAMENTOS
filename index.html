@@ -477,21 +477,14 @@
                             <p><strong>Solução:</strong> ensinamos a cliente a estruturar uma pasta com as planilhas mensais, importar tudo de uma vez no Power Query (combinação automática de arquivos), tratar e consolidar os dados, e carregar o modelo no Power BI com medidas DAX próprias.</p>
                             <p><strong>Resultado:</strong> processo autônomo — todo mês a cliente só insere as novas planilhas na pasta e clica em Atualizar no Power BI para os indicadores se atualizarem sozinhos.</p>
 
-                            <div class="case-mockup">
-                                <div class="case-mockup-header"><i class="bi bi-bar-chart-line"></i> Estrutura do painel entregue</div>
-                                <div class="case-mockup-stats">
-                                    <div class="case-stat"><span class="case-stat-value">R$ 2,4 Mi</span><span class="case-stat-label">Total faturado/mês</span></div>
-                                    <div class="case-stat"><span class="case-stat-value">3,1 Mi kWh</span><span class="case-stat-label">Consumo total</span></div>
-                                    <div class="case-stat"><span class="case-stat-value">~5.000</span><span class="case-stat-label">Clientes (UCs)</span></div>
-                                    <div class="case-stat"><span class="case-stat-value">628 kWh</span><span class="case-stat-label">Consumo médio</span></div>
-                                </div>
-                                <div class="case-mockup-bars">
-                                    <div class="case-bar-row"><span>Município A</span><div class="case-bar"><div class="case-bar-fill" style="width:92%"></div></div></div>
-                                    <div class="case-bar-row"><span>Município B</span><div class="case-bar"><div class="case-bar-fill" style="width:81%"></div></div></div>
-                                    <div class="case-bar-row"><span>Município C</span><div class="case-bar"><div class="case-bar-fill" style="width:66%"></div></div></div>
+                            <div class="case-screenshots">
+                                <div class="case-screenshot-item">
+                                    <span class="case-mockup-header"><i class="bi bi-bar-chart-line"></i> Painel entregue à cliente</span>
+                                    <img src="assets/Case_FaturasEnergia_PainelBI.jpg" alt="Painel Power BI com faturamento mensal, consumo médio por classe e ranking de municípios por consumo" class="case-screenshot-img" loading="lazy">
+                                    <span class="case-screenshot-zoom-hint"><i class="bi bi-zoom-in"></i> Toque para ampliar</span>
                                 </div>
                             </div>
-                            <p class="case-disclaimer">Estrutura ilustrativa do painel — números de exemplo, cliente e dados alterados por confidencialidade.</p>
+                            <p class="case-disclaimer">Painel real entregue à cliente — nome da empresa oculto por confidencialidade.</p>
                         </div>
                     </div>
 
@@ -507,25 +500,34 @@
                             <p><strong>Solução:</strong> reestruturamos a planilha de controle com fórmulas auditáveis (visíveis célula a célula), validação de dados em lista suspensa para os campos categóricos, e um gráfico que se atualiza sozinho conforme a equipe vai preenchendo.</p>
                             <p><strong>Resultado:</strong> saída de um controle manual e sujeito a erro para uma planilha estruturada, com sinalização automática de quem está perto do limite mensal.</p>
 
-                            <div class="case-before-after">
-                                <div class="case-ba-col case-ba-before">
-                                    <span class="case-ba-tag">Antes</span>
-                                    <ul>
-                                        <li>Controle manual, texto livre</li>
-                                        <li>Sem alerta de limite mensal</li>
-                                        <li>Fácil perder o controle do saldo</li>
-                                    </ul>
+                            <div class="case-screenshots">
+                                <div class="case-screenshot-item">
+                                    <span class="case-ba-tag case-ba-tag-before">Antes</span>
+                                    <img src="assets/Case_HorasExtras_Antes.jpg" alt="Print da planilha antes: controle manual, sem fórmulas nem alerta de limite" class="case-screenshot-img" loading="lazy">
+                                    <span class="case-screenshot-zoom-hint"><i class="bi bi-zoom-in"></i> Toque para ampliar</span>
                                 </div>
-                                <div class="case-ba-col case-ba-after">
-                                    <span class="case-ba-tag">Depois</span>
-                                    <ul>
-                                        <li>Fórmulas auditáveis por colaborador/mês</li>
-                                        <li>Lista suspensa (validação de dados)</li>
-                                        <li>Gráfico dinâmico, atualiza sozinho</li>
-                                    </ul>
+                                <div class="case-screenshot-item">
+                                    <span class="case-ba-tag case-ba-tag-after">Depois</span>
+                                    <img src="assets/Case_HorasExtras_Depois.jpg" alt="Print da planilha depois: limite calculado automaticamente e situação colorida por colaborador" class="case-screenshot-img" loading="lazy">
+                                    <span class="case-screenshot-zoom-hint"><i class="bi bi-zoom-in"></i> Toque para ampliar</span>
                                 </div>
                             </div>
-                            <p class="case-disclaimer">Estrutura ilustrativa da planilha entregue aos alunos.</p>
+
+                            <div class="case-mockup">
+                                <div class="case-mockup-header"><i class="bi bi-toggles"></i> Como a planilha calcula sozinha</div>
+                                <div class="case-mockup-stats">
+                                    <div class="case-stat"><span class="case-stat-value">40h</span><span class="case-stat-label">Limite mensal · contrato Comercial</span></div>
+                                    <div class="case-stat"><span class="case-stat-value">55h</span><span class="case-stat-label">Limite mensal · contrato 3x3</span></div>
+                                </div>
+                                <div class="case-status-legend">
+                                    <div class="case-status-item"><span class="case-status-dot case-status-green"></span>Pode fazer hora extra</div>
+                                    <div class="case-status-item"><span class="case-status-dot case-status-yellow"></span>Atenção — perto do limite</div>
+                                    <div class="case-status-item"><span class="case-status-dot case-status-red"></span>Limite atingido</div>
+                                    <div class="case-status-item"><span class="case-status-dot case-status-gray"></span>Definir tipo de contrato</div>
+                                </div>
+                                <div class="case-mockup-footnote"><i class="bi bi-list-ol"></i> Gera sozinho um ranking dos 10 colaboradores com mais hora extra no mês.</div>
+                            </div>
+                            <p class="case-disclaimer">Estrutura ilustrativa da planilha entregue aos alunos — colaboradores e valores de exemplo.</p>
                         </div>
                     </div>
 
@@ -746,6 +748,12 @@
             </p>
         </div>
     </footer>
+
+    <!-- Lightbox para ampliar prints dos cases -->
+    <div class="lightbox-overlay" id="case-lightbox" aria-hidden="true">
+        <button type="button" class="lightbox-close" id="case-lightbox-close" aria-label="Fechar imagem ampliada"><i class="bi bi-x-lg"></i></button>
+        <img src="" alt="" id="case-lightbox-img" class="lightbox-img">
+    </div>
 
     <!-- Scripts -->
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
