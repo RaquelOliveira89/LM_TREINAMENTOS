@@ -204,6 +204,44 @@ h1, h2, h3, h4, h5, h6,
   .hero-floating-card { right: 10px; }
 }
 
+/* Variante horizontal (banner com foto de turma real, ex: Denso) */
+.hero-media-wide {
+  max-width: 980px;
+  margin: 56px auto 0;
+}
+
+.hero-photo-wide {
+  aspect-ratio: 1600 / 980;
+}
+
+/* Numa foto de turma real e larga, os selos flutuantes precisam ficar
+   totalmente fora da imagem (nas quinas), pra não cobrir ninguém. */
+.hero-media-wide .badge-company {
+  top: -16px;
+  right: -16px;
+}
+
+.hero-media-wide .badge-award {
+  top: auto;
+  bottom: -16px;
+  left: -16px;
+}
+
+@media (max-width: 991px) {
+  .hero-media-wide { margin-top: 40px; }
+  .hero-media-wide .badge-company { top: -12px; right: -12px; }
+  .hero-media-wide .badge-award { bottom: -12px; left: -12px; }
+}
+
+.hero-photo-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  font-style: italic;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
 .btn-custom {
   background: linear-gradient(135deg, var(--highlight-yellow), #f0b93d);
   color: var(--text-dark);
@@ -1031,12 +1069,12 @@ footer {
   z-index: 3;
   animation: floatBadge 3.5s ease-in-out infinite;
 }
-.badge-excel {
+.badge-company {
   top: 20px;
   right: -20px;
   background: linear-gradient(135deg, #1D6F42, #2E9E5B);
 }
-.badge-bi {
+.badge-award {
   top: 48%;
   left: -22px;
   background: linear-gradient(135deg, var(--highlight-yellow), #f0b93d);
@@ -1051,8 +1089,8 @@ footer {
 
 @media (max-width: 991px) {
   .hero-float-badge { width: 44px; height: 44px; font-size: 1.15rem; border-radius: 13px; }
-  .badge-excel { right: -8px; }
-  .badge-bi { left: -8px; }
+  .badge-company { right: -8px; }
+  .badge-award { left: -8px; }
 }
 
 /* --- Ícones nas pílulas de filtro de cursos --- */
