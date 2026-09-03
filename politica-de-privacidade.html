@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidade e Proteção de Dados Pessoais da LM Treinamentos e Consultoria, em conformidade com a Lei nº 13.709/2018 (LGPD).">
+    <meta name="author" content="LM Treinamentos">
+    <meta name="robots" content="index, follow">
+    <title>Política de Privacidade e Proteção de Dados Pessoais | LM Treinamentos</title>
+
+    <link rel="canonical" href="https://lmtreinamentoseconsultoria.com.br/politica-de-privacidade">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Política de Privacidade e Proteção de Dados Pessoais | LM Treinamentos">
+    <meta property="og:description" content="Como a LM Treinamentos e Consultoria coleta, utiliza, armazena, compartilha e protege dados pessoais, em conformidade com a LGPD.">
+    <meta property="og:url" content="https://lmtreinamentoseconsultoria.com.br/politica-de-privacidade">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/LM.jpeg">
+
+    <!-- Bootstrap & Icons -->
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.css">
+    <!-- Fonts -->
+    <link href="vendor/fonts/fonts.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-hero {
+            padding: 130px 0 50px;
+            background: linear-gradient(180deg, #eef3fc 0%, var(--bg-light) 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .legal-hero .eyebrow { margin-bottom: 14px; }
+        .legal-hero h1 {
+            color: var(--text-dark);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            margin-bottom: 18px;
+        }
+        .legal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 26px;
+            margin-top: 8px;
+            font-size: 0.92rem;
+            color: var(--secondary-text);
+        }
+        .legal-meta span { display: inline-flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+        .legal-meta i { color: var(--primary-blue); }
+
+        .legal-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 26px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            color: var(--primary-blue);
+        }
+        .legal-back:hover { color: var(--vibrant-blue); }
+
+        .legal-body { padding: 56px 0 80px; }
+        .legal-wrap { max-width: 880px; margin: 0 auto; overflow-wrap: break-word; }
+
+        .legal-callout {
+            background: var(--bg-white);
+            border: 1px solid rgba(14, 59, 156, 0.1);
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 14px;
+            padding: 20px 22px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+        .legal-callout i { font-size: 1.3rem; color: var(--primary-blue); flex-shrink: 0; margin-top: 2px; }
+        .legal-callout .legal-callout-content { min-width: 0; }
+        .legal-callout dl { margin: 0; font-size: 0.94rem; color: var(--secondary-text); }
+        .legal-callout dl > div { margin-bottom: 4px; }
+        .legal-callout dl > div:last-child { margin-bottom: 0; }
+        .legal-callout dt { display: inline; font-weight: 700; color: var(--text-dark); }
+        .legal-callout dd { display: inline; margin: 0; }
+
+        .legal-toc {
+            background: var(--bg-white);
+            border: 1px solid rgba(14, 59, 156, 0.08);
+            border-radius: 18px;
+            padding: 26px 28px;
+            box-shadow: 0 10px 30px rgba(14, 59, 156, 0.06);
+            margin-bottom: 48px;
+        }
+        .legal-toc h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--vibrant-blue);
+            margin-bottom: 16px;
+        }
+        .legal-toc ol {
+            margin: 0;
+            padding-left: 1.2rem;
+            columns: 2;
+            column-gap: 34px;
+        }
+        .legal-toc li { margin-bottom: 8px; break-inside: avoid; }
+        .legal-toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.93rem;
+        }
+        .legal-toc a:hover { color: var(--vibrant-blue); text-decoration: underline; }
+
+        .legal-section { margin-bottom: 42px; scroll-margin-top: 90px; }
+        .legal-section h2 {
+            font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(14, 59, 156, 0.12);
+        }
+        .legal-section p,
+        .legal-section li {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #3a4a63;
+        }
+        .legal-section p { margin-bottom: 14px; }
+        .legal-section ul { padding-left: 1.25rem; margin-bottom: 14px; }
+        .legal-section li { margin-bottom: 8px; }
+
+        .legal-flag {
+            display: inline-block;
+            background: var(--highlight-yellow);
+            color: var(--text-dark);
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.88rem;
+            padding: 2px 9px;
+            border-radius: 6px;
+            letter-spacing: 0.3px;
+            overflow-wrap: break-word;
+        }
+
+        .legal-contact-box {
+            background: var(--bg-light);
+            border: 1px solid rgba(14, 59, 156, 0.1);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-top: 8px;
+        }
+        .legal-contact-box p { margin-bottom: 8px; }
+        .legal-contact-box p:last-child { margin-bottom: 0; }
+
+        .legal-updated-note {
+            margin-top: 48px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
+
+        .legal-bottom-actions {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .legal-hero { padding: 110px 0 40px; }
+            .legal-body { padding: 40px 0 60px; }
+            .legal-toc { padding: 22px 20px; }
+            .legal-toc ol { columns: 1; }
+            .legal-meta { flex-direction: column; gap: 10px; }
+            .legal-meta span { align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5592981238797" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/LM.jpeg" alt="LM Treinamentos" height="50" class="logo-dynamic">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#turmas">Turmas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="anticorrupcao.html">Canal de Ética</a></li>
+                    <li class="nav-item"><a class="nav-link nav-contact-btn" href="index.html#contato">Garantir Vaga</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / CABEÇALHO -->
+    <header class="legal-hero">
+        <div class="container">
+            <div class="legal-wrap">
+                <a href="index.html" class="legal-back">
+                    <i class="bi bi-arrow-left"></i> Voltar ao site
+                </a>
+                <span class="eyebrow">LM Treinamentos e Consultoria</span>
+                <h1>Política de Privacidade e Proteção de Dados Pessoais</h1>
+                <div class="legal-meta">
+                    <span><i class="bi bi-file-earmark-text"></i> Versão 1.0</span>
+                    <span><i class="bi bi-calendar-check"></i> Última atualização: <span class="legal-flag">[DEFINIR DATA DE PUBLICAÇÃO]</span></span>
+                    <span><i class="bi bi-shield-check"></i> Lei nº 13.709/2018 (LGPD)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="legal-body">
+        <div class="container">
+            <div class="legal-wrap">
+
+                <div class="legal-callout">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <div class="legal-callout-content">
+                        <dl>
+                            <div><dt>Documento:</dt> <dd>Política de Privacidade e Proteção de Dados Pessoais</dd></div>
+                            <div><dt>Responsável:</dt> <dd>LM Treinamentos e Consultoria</dd></div>
+                            <div><dt>Vigência:</dt> <dd>a partir da publicação no site oficial</dd></div>
+                            <div><dt>Revisão:</dt> <dd>sempre que houver alteração legal, tecnológica ou operacional relevante</dd></div>
+                        </dl>
+                    </div>
+                </div>
+
+                <!-- SUMÁRIO -->
+                <nav class="legal-toc" aria-label="Sumário">
+                    <h2>Sumário</h2>
+                    <ol>
+                        <li><a href="#s1">Apresentação</a></li>
+                        <li><a href="#s2">A quem esta Política se aplica</a></li>
+                        <li><a href="#s3">Quais dados pessoais podem ser tratados</a></li>
+                        <li><a href="#s4">Finalidades do tratamento</a></li>
+                        <li><a href="#s5">Bases legais</a></li>
+                        <li><a href="#s6">Atendimento pelo WhatsApp e uso de inteligência artificial</a></li>
+                        <li><a href="#s7">Compartilhamento de dados e fornecedores</a></li>
+                        <li><a href="#s8">Transferência internacional de dados</a></li>
+                        <li><a href="#s9">Armazenamento e retenção</a></li>
+                        <li><a href="#s10">Segurança da informação</a></li>
+                        <li><a href="#s11">Direitos dos titulares</a></li>
+                        <li><a href="#s12">Cookies e tecnologias semelhantes</a></li>
+                        <li><a href="#s13">Links e serviços de terceiros</a></li>
+                        <li><a href="#s14">Dados de crianças e adolescentes</a></li>
+                        <li><a href="#s15">Comunicações comerciais</a></li>
+                        <li><a href="#s16">Alterações desta Política</a></li>
+                        <li><a href="#s17">Contato e exercício de direitos</a></li>
+                    </ol>
+                </nav>
+
+                <section class="legal-section" id="s1">
+                    <h2>1. Apresentação</h2>
+                    <p>A LM Treinamentos e Consultoria valoriza a privacidade, a segurança e a transparência no tratamento dos dados pessoais de seus alunos, clientes, visitantes, parceiros e demais pessoas que se relacionam conosco.</p>
+                    <p>Esta Política de Privacidade e Proteção de Dados Pessoais explica, de forma clara, como a LM pode coletar, utilizar, armazenar, compartilhar e proteger dados pessoais no contexto de seus cursos, treinamentos, consultorias, site, formulários, canais de atendimento e demais serviços.</p>
+                    <p>O tratamento de dados pessoais é realizado em conformidade com a Lei nº 13.709/2018 - Lei Geral de Proteção de Dados Pessoais (LGPD) - e com os princípios de finalidade, adequação, necessidade, transparência, segurança, prevenção e responsabilização.</p>
+                </section>
+
+                <section class="legal-section" id="s2">
+                    <h2>2. A quem esta Política se aplica</h2>
+                    <p>Esta Política aplica-se às pessoas que interagem com a LM Treinamentos e Consultoria por meio do site institucional, formulários de contato ou matrícula, WhatsApp, e-mail, redes sociais, cursos, treinamentos, consultorias, eventos, atendimento comercial e demais canais oficiais da empresa.</p>
+                </section>
+
+                <section class="legal-section" id="s3">
+                    <h2>3. Quais dados pessoais podem ser tratados</h2>
+                    <p>Dependendo da relação mantida com a LM, poderão ser tratados dados como:</p>
+                    <ul>
+                        <li>nome completo e dados de identificação necessários à prestação dos serviços;</li>
+                        <li>telefone e número de WhatsApp;</li>
+                        <li>endereço de e-mail;</li>
+                        <li>informações relacionadas ao curso, treinamento ou serviço de interesse;</li>
+                        <li>dados necessários à matrícula, contratação, emissão de recibos, certificados e documentos relacionados ao serviço;</li>
+                        <li>informações de presença, participação e desempenho em avaliações, quando aplicável;</li>
+                        <li>informações fornecidas voluntariamente em formulários, mensagens e atendimentos;</li>
+                        <li>dados relacionados à empresa representada pelo titular, quando se tratar de cliente corporativo;</li>
+                        <li>dados técnicos necessários ao funcionamento, segurança e melhoria do site, quando aplicável.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section" id="s4">
+                    <h2>4. Finalidades do tratamento</h2>
+                    <p>Os dados pessoais poderão ser utilizados para as seguintes finalidades:</p>
+                    <ul>
+                        <li>responder dúvidas e solicitações de contato;</li>
+                        <li>prestar informações sobre cursos, treinamentos, consultorias e demais serviços da LM;</li>
+                        <li>realizar matrículas, inscrições e cadastros;</li>
+                        <li>elaborar propostas comerciais e executar contratos;</li>
+                        <li>emitir certificados, recibos e outros documentos relacionados aos serviços contratados;</li>
+                        <li>manter registros acadêmicos, administrativos e de participação;</li>
+                        <li>prestar suporte e atendimento ao aluno ou cliente;</li>
+                        <li>realizar comunicações administrativas relacionadas à contratação ou ao curso;</li>
+                        <li>realizar comunicações comerciais próprias da LM, quando houver base legal adequada;</li>
+                        <li>cumprir obrigações legais, regulatórias, contratuais e exercício regular de direitos;</li>
+                        <li>prevenir fraudes, abusos e incidentes de segurança;</li>
+                        <li>melhorar processos, serviços e a experiência de atendimento.</li>
+                    </ul>
+                </section>
+
+                <section class="legal-section" id="s5">
+                    <h2>5. Bases legais</h2>
+                    <p>O tratamento de dados pessoais poderá ser realizado com fundamento nas bases legais previstas na LGPD, de acordo com cada finalidade, incluindo, quando aplicável, consentimento, execução de contrato ou de procedimentos preliminares relacionados a contrato, cumprimento de obrigação legal ou regulatória, exercício regular de direitos e legítimo interesse, sempre observados os direitos e liberdades fundamentais do titular.</p>
+                </section>
+
+                <section class="legal-section" id="s6">
+                    <h2>6. Atendimento pelo WhatsApp e uso de inteligência artificial</h2>
+                    <p>A LM poderá utilizar o WhatsApp e soluções tecnológicas de automação e inteligência artificial para auxiliar no atendimento comercial, esclarecimento de dúvidas, recomendação de cursos e direcionamento de solicitações.</p>
+                    <p>Durante esse atendimento, informações como número de telefone, nome, mensagens enviadas, curso de interesse e histórico da conversa poderão ser processadas para compreender a solicitação e dar continuidade ao atendimento.</p>
+                    <p>Quando necessário, o atendimento automatizado poderá ser encaminhado para uma pessoa da equipe da LM. Nessas situações, o atendimento automático poderá ser interrompido para permitir a continuidade pelo atendimento humano.</p>
+                    <p>Recomenda-se que o usuário não envie, pelo atendimento automatizado, senhas, dados bancários completos, documentos desnecessários ou dados pessoais sensíveis que não tenham sido expressamente solicitados pela LM.</p>
+                </section>
+
+                <section class="legal-section" id="s7">
+                    <h2>7. Compartilhamento de dados e fornecedores</h2>
+                    <p>A LM não comercializa dados pessoais.</p>
+                    <p>Determinados dados poderão ser tratados ou compartilhados com fornecedores e parceiros necessários ao funcionamento dos serviços, como provedores de hospedagem, plataformas de comunicação, serviços de tecnologia, sistemas de gestão, ferramentas de automação, provedores de inteligência artificial, plataformas educacionais, meios de pagamento e outros fornecedores indispensáveis à prestação dos serviços.</p>
+                    <p>Sempre que aplicável, a LM buscará adotar medidas contratuais, técnicas e administrativas adequadas para exigir dos terceiros envolvidos nível de proteção compatível com a legislação aplicável.</p>
+                    <p>Os dados também poderão ser disponibilizados quando necessário para cumprimento de obrigação legal, regulatória ou determinação de autoridade competente.</p>
+                </section>
+
+                <section class="legal-section" id="s8">
+                    <h2>8. Transferência internacional de dados</h2>
+                    <p>Alguns fornecedores tecnológicos utilizados pela LM poderão operar infraestrutura ou realizar processamento de dados fora do Brasil. Quando houver transferência internacional de dados pessoais, a LM buscará observar os requisitos, garantias e mecanismos previstos na legislação brasileira de proteção de dados.</p>
+                </section>
+
+                <section class="legal-section" id="s9">
+                    <h2>9. Armazenamento e retenção</h2>
+                    <p>Os dados pessoais serão mantidos pelo período necessário ao cumprimento das finalidades para as quais foram coletados e pelo tempo necessário ao atendimento de obrigações legais, regulatórias, contratuais ou ao exercício regular de direitos.</p>
+                    <p>Registros acadêmicos, certificados, listas de presença, avaliações, documentos financeiros e registros contratuais poderão possuir prazos específicos de conservação conforme a natureza da atividade e as obrigações aplicáveis.</p>
+                    <p>Quando não houver finalidade, obrigação ou fundamento legal para a conservação, os dados poderão ser eliminados, anonimizados ou mantidos de forma compatível com a legislação aplicável.</p>
+                </section>
+
+                <section class="legal-section" id="s10">
+                    <h2>10. Segurança da informação</h2>
+                    <p>A LM adota medidas administrativas e tecnológicas destinadas a proteger os dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou tratamento inadequado.</p>
+                    <p>O acesso às informações deve ocorrer apenas por pessoas autorizadas e para finalidades legítimas relacionadas às atividades da LM.</p>
+                    <p>Nenhum sistema é absolutamente imune a riscos. Caso seja identificado incidente de segurança envolvendo dados pessoais, a LM adotará as providências cabíveis de acordo com a legislação aplicável.</p>
+                </section>
+
+                <section class="legal-section" id="s11">
+                    <h2>11. Direitos dos titulares</h2>
+                    <p>Nos termos da LGPD, o titular poderá, quando aplicável, solicitar:</p>
+                    <ul>
+                        <li>confirmação da existência de tratamento de seus dados pessoais;</li>
+                        <li>acesso aos dados pessoais tratados;</li>
+                        <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+                        <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a legislação;</li>
+                        <li>informações sobre o compartilhamento de seus dados;</li>
+                        <li>portabilidade, quando aplicável e observada a regulamentação;</li>
+                        <li>eliminação dos dados tratados com base em consentimento, ressalvadas as hipóteses legais de conservação;</li>
+                        <li>informações sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa, quando aplicável;</li>
+                        <li>revogação do consentimento, quando esta for a base legal utilizada;</li>
+                        <li>revisão de decisões tomadas unicamente com base em tratamento automatizado, quando aplicável.</li>
+                    </ul>
+                    <p>Alguns dados poderão precisar ser mantidos mesmo após solicitação de exclusão quando sua conservação for necessária para cumprimento de obrigação legal ou regulatória, execução contratual, exercício regular de direitos ou outra hipótese autorizada pela legislação.</p>
+                </section>
+
+                <section class="legal-section" id="s12">
+                    <h2>12. Cookies e tecnologias semelhantes</h2>
+                    <p>O site da LM poderá utilizar cookies e tecnologias semelhantes necessários ao funcionamento, segurança e melhoria da experiência de navegação.</p>
+                    <p>Caso sejam utilizados cookies de análise, publicidade ou outras tecnologias não essenciais que dependam de consentimento, a LM poderá disponibilizar mecanismos para que o usuário gerencie suas preferências.</p>
+                </section>
+
+                <section class="legal-section" id="s13">
+                    <h2>13. Links e serviços de terceiros</h2>
+                    <p>O site e os canais da LM poderão conter links para plataformas ou serviços de terceiros. Ao acessar ambientes externos, o usuário estará sujeito também às políticas e práticas de privacidade do respectivo fornecedor, sobre as quais a LM não possui controle direto.</p>
+                </section>
+
+                <section class="legal-section" id="s14">
+                    <h2>14. Dados de crianças e adolescentes</h2>
+                    <p>Os serviços da LM poderão eventualmente envolver participantes menores de idade. Quando aplicável, o tratamento de dados de crianças e adolescentes será realizado considerando seu melhor interesse e as exigências específicas da legislação brasileira, inclusive quanto à participação de pais ou responsáveis legais quando exigida.</p>
+                </section>
+
+                <section class="legal-section" id="s15">
+                    <h2>15. Comunicações comerciais</h2>
+                    <p>A LM poderá enviar comunicações sobre seus próprios cursos, treinamentos, eventos e serviços quando houver base legal adequada. O titular poderá solicitar, a qualquer momento, a interrupção de comunicações promocionais, sem prejuízo das mensagens administrativas necessárias à execução de contratos, matrículas ou serviços.</p>
+                </section>
+
+                <section class="legal-section" id="s16">
+                    <h2>16. Alterações desta Política</h2>
+                    <p>Esta Política poderá ser atualizada em razão de mudanças legais, regulatórias, tecnológicas, operacionais ou nos serviços da LM. A versão vigente deverá permanecer disponível no site oficial, acompanhada da informação sobre sua última atualização.</p>
+                </section>
+
+                <section class="legal-section" id="s17">
+                    <h2>17. Contato e exercício de direitos</h2>
+                    <p>Para dúvidas sobre esta Política, solicitações relacionadas à privacidade ou exercício dos direitos previstos na LGPD, o titular poderá entrar em contato por meio dos canais oficiais disponibilizados pela LM Treinamentos e Consultoria.</p>
+                    <div class="legal-contact-box">
+                        <p><strong>E-mail para assuntos de privacidade:</strong> <span class="legal-flag">[DEFINIR E-MAIL ANTES DA PUBLICAÇÃO]</span></p>
+                        <p><strong>Site oficial:</strong> <a href="https://lmtreinamentoseconsultoria.com.br" target="_blank" rel="noopener">https://lmtreinamentoseconsultoria.com.br</a></p>
+                    </div>
+                </section>
+
+                <p class="legal-updated-note">
+                    Política de Privacidade e Proteção de Dados Pessoais &mdash; Versão 1.0.
+                    Última atualização: <span class="legal-flag">[DEFINIR DATA DE PUBLICAÇÃO]</span>.
+                    Documento público destinado ao site institucional da LM Treinamentos e Consultoria.
+                </p>
+
+                <div class="legal-bottom-actions">
+                    <a href="index.html" class="btn btn-custom rounded-pill px-4">Voltar ao site</a>
+                    <a href="#" class="btn btn-outline-primary rounded-pill px-4">Voltar ao topo</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <img src="assets/LM.jpeg" alt="LM Treinamentos" class="footer-logo mb-4">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/lmtreinamentoseconsultoria/" target="_blank" rel="noopener" class="text-white me-3 fs-4 footer-social-link insta"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/5592981238797" target="_blank" rel="noopener" class="text-white fs-4 footer-social-link whats"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <p class="mb-2 opacity-75">&copy; 2024 LM Treinamentos e Consultoria. Todos os direitos reservados.</p>
+            <p>
+                <a href="politica-de-privacidade.html" class="text-white-50 text-decoration-none small">Política de Privacidade e LGPD</a>
+                <span class="text-white-50 mx-2">|</span>
+                <a href="anticorrupcao.html" class="text-white-50 text-decoration-none small">Canal de Ética e Denúncias</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
