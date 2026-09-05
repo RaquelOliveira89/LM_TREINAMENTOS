@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initAutoRedirect();
     initCourseFilter();
     initCaseLightbox();
+    initExperienceCarousel();
 });
 
 /**
@@ -222,6 +223,35 @@ function initCaseLightbox() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') close();
     });
+}
+
+/**
+ * Carrossel da seção "Experiência LM" — nativo, com scroll-snap.
+ * Swipe funciona de graça no celular; as setas rolam uma "página" por vez.
+ */
+function initExperienceCarousel() {
+    const carousel = document.querySelector('.exp-carousel');
+    if (!carousel) return;
+
+    const track = carousel.querySelector('.exp-track');
+    const prev = carousel.querySelector('.exp-arrow-prev');
+    const next = carousel.querySelector('.exp-arrow-next');
+    if (!track || !prev || !next) return;
+
+    const page = () => track.clientWidth * 0.9;
+
+    const updateArrows = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = track.scrollLeft <= 0;
+        next.disabled = track.scrollLeft >= maxScroll;
+    };
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -page(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: page(), behavior: 'smooth' }));
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows, { passive: true });
+
+    updateArrows();
 }
 
 /**
