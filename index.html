@@ -711,9 +711,12 @@
         </section>
 
         <!-- CONTATO -->
+        <!-- Sem data-aos nesta seção: ela fica abaixo de imagens/iframe que carregam
+             depois, e o AOS (que fixa a posição-gatilho no load) deixava o formulário
+             e os cards presos em opacity:0 quando a seção era acessada por link âncora. -->
         <section id="contato" class="section-padding bg-white">
             <div class="container">
-                <div class="text-center mb-5" data-aos="fade-up">
+                <div class="text-center mb-5">
                     <span class="eyebrow">Vamos Começar</span>
                     <h2 class="section-title">Fale Conosco</h2>
                     <p class="lead text-muted">Estamos prontos para impulsionar sua carreira ou sua empresa.</p>
@@ -721,7 +724,7 @@
 
                 <div class="row g-5 align-items-stretch">
                     <!-- Lado Esquerdo: Formulário -->
-                    <div class="col-lg-6" data-aos="fade-right">
+                    <div class="col-lg-6">
                         <div class="p-4 p-md-5 rounded-4 shadow-lg border bg-white h-100">
                             <h4 class="fw-bold mb-4">Solicitar Informações</h4>
                             <form id="lead-form" action="https://formsubmit.co/lmtreinamentoseconsultoria@gmail.com" method="POST">
@@ -757,7 +760,7 @@
                     </div>
 
                     <!-- Cards de Informação + Mapa -->
-                    <div class="col-lg-6" data-aos="fade-left">
+                    <div class="col-lg-6">
                         <div class="contact-cards-container mb-4">
                             <a href="https://wa.me/5592981238797" target="_blank" class="contact-info-card contact-whatsapp">
                                 <i class="bi bi-whatsapp"></i>

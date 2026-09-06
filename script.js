@@ -27,6 +27,16 @@ function initAOS() {
         once: true,
         disable: isMobile ? 'phone' : false // Opcional: simplifica a carga em celulares
     });
+
+    // O AOS calcula a posição-gatilho de cada elemento uma única vez (no init).
+    // Como há imagens e um iframe que carregam depois e empurram o conteúdo para
+    // baixo, essas posições ficam desatualizadas — e seções acessadas por link
+    // âncora (ex.: #contato via "Garantir Vaga") podiam ficar presas em opacity:0.
+    // Recalcular no load e a cada mudança de hash resolve sem re-animar nada
+    // (once:true mantém o que já apareceu).
+    const refreshAOS = () => { if (window.AOS) AOS.refresh(); };
+    window.addEventListener('load', refreshAOS);
+    window.addEventListener('hashchange', refreshAOS);
 }
 
 /**
