@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTracking();
     initFormHandling();
     initMobileMenu();
+    initSmoothAnchors();
     initAutoRedirect();
     initCourseFilter();
     initCaseLightbox();
@@ -71,6 +72,100 @@ function initMobileMenu() {
             }
         });
     });
+}
+
+/**
+ * Rolagem suave e precisa para âncoras internas (menu, "Garantir Vaga", CTAs do hero).
+ *
+ * Corrige dois problemas:
+ *  - a navbar fixa cobria o topo da seção de destino (faltava compensar o offset);
+ *  - no primeiro acesso, imagens/iframe abaixo da dobra carregavam DEPOIS do clique,
+ *    aumentavam a altura da página e a rolagem "parava na seção de cima" — era
+ *    preciso clicar duas vezes.
+ *
+ * Solução: intercepta o clique, calcula a posição real do alvo já com a altura da
+ * navbar descontada e, após a rolagem, reconfere a posição algumas vezes enquanto
+ * o layout termina de assentar — sem depender de um segundo clique.
+ */
+function initSmoothAnchors() {
+    const navbar = document.querySelector('.navbar');
+    const collapseEl = document.getElementById('navbarNav');
+    const GAP = 18; // respiro entre a navbar e o topo da seção
+
+    const navOffset = () => (navbar ? Math.round(navbar.getBoundingClientRect().height) : 0) + GAP;
+
+    let navToken = 0; // invalida a correção anterior se um novo link for clicado
+
+    function goToElement(el) {
+        const myToken = ++navToken;
+        const top = Math.max(0, Math.round(el.getBoundingClientRect().top + window.pageYOffset - navOffset()));
+        window.scrollTo({ top, behavior: 'smooth' });
+
+        // Reposiciona enquanto a página ainda muda de altura (lazy images, iframe,
+        // troca de fonte, fim do colapso do menu). Para quando fica estável ou
+        // quando o usuário assume o controle da rolagem.
+        let ticks = 0, lastScroll = -1, stable = 0, cancelled = false;
+        const release = () => { cancelled = true; };
+        const evts = ['wheel', 'touchmove', 'keydown'];
+        evts.forEach(evt => window.addEventListener(evt, release, { once: true, passive: true }));
+
+        const settle = () => {
+            if (cancelled || myToken !== navToken) {
+                evts.forEach(evt => window.removeEventListener(evt, release));
+                return;
+            }
+            const now = Math.round(window.pageYOffset);
+            stable = (now === lastScroll) ? stable + 1 : 0;
+            lastScroll = now;
+
+            // só corrige depois que a rolagem suave parou (2 leituras iguais)
+            if (stable >= 2) {
+                const drift = Math.round(el.getBoundingClientRect().top - navOffset());
+                if (Math.abs(drift) > 2) {
+                    window.scrollBy(0, drift);
+                    stable = 0;
+                }
+            }
+
+            if (++ticks < 22) {
+                setTimeout(settle, 120);
+            } else {
+                evts.forEach(evt => window.removeEventListener(evt, release));
+                if (window.AOS) AOS.refresh();
+            }
+        };
+        setTimeout(settle, 120);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        const hash = link.getAttribute('href');
+        if (!hash || hash.length < 2) return; // ignora href="#"
+
+        link.addEventListener('click', (e) => {
+            const el = document.querySelector(hash);
+            if (!el) return; // alvo inexistente: deixa o navegador decidir
+            e.preventDefault();
+
+            const menuOpen = collapseEl && collapseEl.classList.contains('show');
+            if (menuOpen && window.bootstrap) {
+                // espera o menu mobile fechar para medir já com a navbar "curta"
+                collapseEl.addEventListener('hidden.bs.collapse', () => goToElement(el), { once: true });
+                bootstrap.Collapse.getOrCreateInstance(collapseEl).hide();
+            } else {
+                goToElement(el);
+            }
+
+            if (history.pushState) history.pushState(null, '', hash);
+        });
+    });
+
+    // Acesso direto com hash (link de outra página, nova aba, Ctrl+F5): o pulo
+    // nativo acontece antes das imagens carregarem. Reposiciona depois do load.
+    const initialHash = window.location.hash;
+    if (initialHash && initialHash.length > 1) {
+        const el = document.querySelector(initialHash);
+        if (el) window.addEventListener('load', () => setTimeout(() => goToElement(el), 250));
+    }
 }
 
 /**

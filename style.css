@@ -305,7 +305,12 @@ h1, h2, h3, h4, h5, h6,
 .hero p { animation: slideUpFade 0.8s ease-out 0.2s forwards; opacity: 0; }
 .hero .btn-custom { animation: slideUpFade 0.8s ease-out 0.4s forwards; opacity: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Compensa a navbar fixa em qualquer rolagem por âncora (links entre páginas,
+     scrollIntoView, foco). O JS refina a posição após o layout assentar. */
+  scroll-padding-top: 96px;
+}
 
 .section-padding {
   padding: 80px 0;
